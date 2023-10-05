@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycles, Switch, Functions</title>
+    <link rel="stylesheet" href="../global.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="back_button"></a>
+    </header>
+    <main>
+        <h1>Cycles, Switch, Functions</h1>
+        <hr>
+        <section>
+            <h2>Cycles</h2>
+            <article>
+                <h3>while</h3>
+                <pre>
+                    <code>
+                        let timer = 0
+                        while(timer >= 0) {
+                            console.log(timer--)
+                        }
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>do while</h3>
+                <pre>
+                    <code>
+                        let continueAlarm = null
+                        do {
+                            alert(`Drrr!!!`)
+                            continueAlarm = confirm(`continue alarm?`)
+                        } while(continueAlarm)
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>for</h3>
+                <pre>
+                    <code>
+                        for (let i = 10; i >= 0; i--) {
+                            console.log(`осталось ${i} сек.`)
+                        }                        
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h4>break</h4>
+                <h4>continue</h4>
+            </article>
+        </section>
+        <hr>
+        <section>
+            <h2>Switch</h2>
+            <pre>
+                <code>
+                    const userName = prompt(`who are you?`, `anonim`)
+                    switch (userName) {
+                        case `admin`:
+                            console.log(`Hello owner`)
+                            break
+                        case `anonim`:
+                            console.log(`Hi, hidden user`)
+                            break
+                        case null:
+                            console.log(`Have no name...`)
+                            break
+                        default:
+                            console.log(`Hello user ${userName}`);
+                    }
+                                           
+                </code>
+            </pre>
+        </section>
+        <hr>
+        <section>
+            <h2>Functions</h2>
+            <article>
+                <h3>Function Declaration</h3>
+                <pre>
+                    <code>
+                        function sayHi(name) {
+                            return `Hi ${name}`
+                        }
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>Function Expression</h3>
+                <pre>
+                    <code>
+                        const sayHi = function(name) {
+                            return `Hi ${name}`
+                        }
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>Arrow function</h3>
+                <pre>
+                    <code>
+                        const sayHi = (name) => {
+                            return `Hi ${name}`
+                        }
+                    </code>
+                </pre>
+            </article>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
