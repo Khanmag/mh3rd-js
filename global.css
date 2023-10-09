@@ -14,6 +14,7 @@ body > * {
     width: 100vw;
     background-color: rgb(232, 232, 232);
     padding: 0 5%;
+    overflow: hidden;
 }
 header, footer {
     min-height: 50px;
