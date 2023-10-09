@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects, methods</title>
+    <link rel="stylesheet" href="../global.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="back_button"></a>
+    </header>
+    <main>
+        <h1>Objects, methods</h1>
+        <hr>
+        <section>
+            <h2>Objects</h2>
+            <article>
+                <h3>declaration</h3>
+                <pre>
+                    <code>
+                        const obj = new Object()                       
+                    </code>
+                </pre>
+                <pre>
+                    <code>
+                        const obj = {
+                            login: `solo`,
+                            pass: 777,
+                        }                        
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>add property</h3>
+                <pre>
+                    <code>
+                        obj.role = `user`
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>delete property</h3>
+                <pre>
+                    <code>
+                        delete obj.pass                        
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>read property</h3>
+                <pre>
+                    <code>
+                        obj.role                       
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>calculated properties</h3>
+                <pre>
+                    <code>
+                        const fruit = prompt('what fruit do you want?', 'apple')
+                        const obj = {[fruit]: 1}                      
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>properties from variables</h3>
+                <pre>
+                    <code>
+                        const login = 'solo'
+                        const pass = 777
+                        const obj = {
+                            login,
+                            pass,
+                        }                    
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>checking the existence of a property</h3>
+                <pre>
+                    <code>
+                        'login' in obj // true
+                        'password' in obj // false                   
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>cycle `for` for objects</h3>
+                <pre>
+                    <code>
+                        for (let key in obj) {
+                            console.log(key); // `login`, `pass`
+                            console.log(obj[key]) // `solo`, 777
+                        }                                          
+                    </code>
+                </pre>
+            </article>
+        </section>
+        <hr>
+        <section>
+            <h2>structuredClone(obj)</h2>
+            <article>
+                <h3>simple cloning</h3>
+                <pre>
+                    <code>
+                        const obj1 = {code: '007'}
+                        const obj2 = obj1
+                        obj2.code = '008'
+                        console.log(obj1.code); // 008
+                        console.log(obj1 === obj2) // true                 
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>deep cloning</h3>
+                <pre>
+                    <code>
+                        const obj1 = {code: '007'}
+                        const obj2 = structuredClone(obj1)
+                        obj2.code = '008'
+                        console.log(obj1.code); // 007 
+                        console.log(obj1 === obj2) // false               
+                    </code>
+                </pre>
+            </article>
+        </section>
+        <hr>
+        <section>
+            <h2>Methods</h2>
+            <article>
+                <h3>Object method</h3>
+                <pre>
+                    <code>
+                        const obj = {
+                            login: `solo`,
+                            pass: 777,
+                        }
+                        obj.getLogin = function() {
+                            console.log(obj.login);
+                        }
+                        obj.getLogin() // `solo`
+                    </code>
+                </pre>
+                <pre>
+                    <code>
+                        const obj = {
+                            login: `solo`,
+                            pass: 777,
+                            getLogin: function() {
+                                console.log(obj.login);
+                            }
+                        }                        
+                    </code>
+                </pre>
+                <pre>
+                    <code>
+                        const obj = {
+                            login: `solo`,
+                            pass: 777,
+                            getLogin() {
+                                console.log(obj.login);
+                            }
+                        }                                               
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <h3>this</h3>
+                <pre>
+                    <code>
+                        const obj = {
+                            login: `solo`,
+                            pass: 777,
+                            getLogin() {
+                                console.log(this.login);
+                            }
+                        }                                                                       
+                    </code>
+                </pre>
+            </article>        
+        </section>
+        <hr>
+        <section>
+            <h2>new</h2>
+            <article>
+                <pre>
+                    <code>
+                        function User(login, pass, role = 'user') {
+                            this.login = login
+                            this.pass = pass
+                            this.role = role
+                            this.getInfo = function() {
+                                return `login: ${this.login}; role: ${this.role};`
+                            }
+                        }
+                        const user1 = new User('Anna', 1111)
+                        const user2 = new User('Bill', 2222)
+                        const user3 = new User('Clint', 3333, 'admin')
+                        console.log(user2.getInfo()) // login: Bill; role: user;                                                                      
+                    </code>
+                </pre>
+            </article>
+        </section>
+        <hr>
+        <section>
+            <h2>Optional chaining “?.”</h2>
+            <article>
+                <pre>
+                    <code>
+                        const profile = null
+                        console.log(profile.name); // error
+                        console.log(profile?.name); // undefined
+                    </code>
+                </pre>
+            </article>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
