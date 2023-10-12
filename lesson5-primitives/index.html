@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods of primitives</title>
+    <link rel="stylesheet" href="../global.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="back_button"></a>
+    </header>
+    <main>
+        <h1>Methods of primitives</h1>
+        <hr>
+        <section>
+            <h2>Methods of numbers</h2>
+            <article>
+                <pre>
+                const m1 = 1000000    // 1000000
+                const m2 = 1_000_000  // 1000000
+                const m3 = 1e6        // 1000000
+                const m3 = 1e-3       // 0.001
+            </pre>
+            </article>
+            <article>
+                <h3>num.toString(c)</h3>
+                <p>
+                    переводит в строковый тип, если передать
+                    c - переведёт в указанную систему исчисления
+                </p>
+                <pre>
+                197.5.toString()   // 195.5
+                197..toString(2)   // 11000101
+                197..toString(8)   // 305
+                197..toString(16)  // c5
+            </pre>
+            </article>
+            <article>
+                <h3>isNaN, isFinite</h3>
+                <p>
+                    Принципиальная разница между методами с Number и без
+                    заключается в том, что методы с Number проводят проверку
+                    по типу, если переданное значение не является числом то
+                    сразу возвращается false. А методы isNaN и isFinite приводят
+                    переданное значение к числу, поэтому
+                    `string` становится NaN, а `329` - конечным числом.
+                </p>
+                <pre>
+                isNaN('string')        // true
+                Number.isNaN('string') // false
+                isFinite('329')        // true
+                Number.isNaN('329')    // false
+            </pre>
+            </article>
+            <article>
+                <h3>parseInt, parseFloat</h3>
+                <p>
+                    Данные методы позволяют получить числовое значение
+                    отбрасывая единицы измерения. parseInt работает для
+                    целых значений, а parseFloat, в том числе, для дробных.
+                    Данные методы имеют свои недостатки, отлично подойдут для чтения
+                    значений CSS свойств, но не для более сложных задач.
+                </p>
+                <pre>
+                parseInt(`100px`)     // 100
+                parseInt(`100.5px`)   // 100
+                parseFloat(`100px`)   // 100
+                parseFloat(`100.5px`) // 100.5                
+            </pre>
+            </article>
+            <article>
+                <h3>Math.</h3>
+                <pre>
+                Math.floor(13.17)  // 13
+                Math.floor(13.71)  // 13
+                Math.floor(-13.17) // 14
+                Math.floor(-13.71) // 14
+            </pre>
+                <pre>
+                Math.ceil(13.17)  // 14
+                Math.ceil(13.71)  // 14
+                Math.ceil(-13.17) // -13
+                Math.ceil(-13.71) // -13
+            </pre>
+                <pre>
+                Math.round(13.17)  // 13
+                Math.round(13.71)  // 14
+                Math.round(-13.17) // -13
+                Math.round(-13.71) // -14
+            </pre>
+                <pre>
+                Math.trunc(13.17)  // 13
+                Math.trunc(13.71)  // 13
+                Math.trunc(-13.17) // -13
+                Math.trunc(-13.71) // -13
+            </pre>
+            </article>
+            <article>
+                <h3>toFixed</h3>
+                <pre>
+                13.17.toFixed(1) // 13.2
+                num.toFixed(3)   // 13.17 => 13.170
+            </pre>
+            </article>
+            <article>
+                <h3>Math.random()</h3>
+                <p>
+                    генерирует с помощью всевдорандома число от 0 до 1
+                </p>
+                <pre>
+                Math.random()   // 0.18950136599683476
+                Math.random()   // 0.7181794503663808
+            </pre>
+            </article>
+        </section>
+        <hr>
+        <section>
+            <h2>Methods of strings</h2>
+            <article>
+                <h3>\ - back slash</h3>
+                <pre>
+                'Let\'s go'
+                "He says: \"Helo\""
+                "1) first \n2) second" // new line
+                '\tАбзац'              // tabulation
+            </pre>
+            </article>
+            <article>
+                <h3>str.length</h3>
+                <pre>
+                'string'.length // 6
+            </pre>
+            </article>
+            <article>
+                <h3>str[n]</h3>
+                <pre>
+                'string'[0] // s
+            </pre>
+            </article>
+            <article>
+                <h3>str.at(z)</h3>
+                <pre>
+                'string'.at[-1] // g
+            </pre>
+            </article>
+            <article>
+                <h3>str.toUpperCase()</h3>
+                <pre>
+                'String'.toUpperCase() // STRING
+            </pre>
+            </article>
+            <article>
+                <h3>str.toLowerCase()</h3>
+                <pre>
+                'String'.toLowerCase() // string
+            </pre>
+            </article>
+            <article>
+                <h3>str.indexOf(substr, pos)</h3>
+                <p>
+                    Возвращает индекс искомой подстроки substr, начиная
+                    с позиции pos. Если такой подстроки нет - возвращает -1
+                </p>
+                <pre>
+                'cocos'.indexOf('c') // 0
+                'cocos'.indexOf('c', 1) // 2
+            </pre>
+            </article>
+            <article>
+                <h3>str.lastIndexOf(substr, pos)</h3>
+                <p>
+                    Аналогичен indexOf, только поиск идёт
+                    справа и можно начать с отрицательной позиции
+                </p>
+                <pre>
+                'cocos'.lastIndexOf('c') // 2
+                'cocos'.lastIndexOf('c', -3) // 0
+            </pre>
+            </article>
+            <article>
+                <h3>str.includes(substr, pos)</h3>
+                <p>
+                    Проверяет наличие подстроки substr, начиная
+                    с позиции pos. Возвращает булевое значение
+                </p>
+                <pre>
+                'cocos'.includes('ko') // false
+                'cocos'.includes('co', 2) // true                
+            </pre>
+            </article>
+            <article>
+                <h3>str.startsWith(substr)</h3>
+                <p>
+                    Проверяет начинается ли строка str с
+                    подстроки substr. Возвращает булевое значение
+                </p>
+                <pre>
+                'cocos'.startsWith('co') // true               
+            </pre>
+            </article>
+            <article>
+                <h3>str.endsWith(substr)</h3>
+                <p>
+                    Проверяет кончается ли строка str с
+                    подстроки substr. Возвращает булевое значение
+                </p>
+                <pre>
+                'cocos'.endsWith('cos') // true             
+            </pre>
+            </article>
+            <article>
+                <h3>str.slice(n, k)</h3>
+                <p>
+                    Возвращает кусочек str начиная с индекса n до k.
+                    Может принимать отрицательные значения
+                </p>
+                <pre>
+                'cocos creator'.slice(1, 5) // ocos
+                'cocos creator'.slice(1, -2) // ocos creat            
+            </pre>
+            </article>
+            <article>
+                <h3>str.substring(n, k)</h3>
+                <p>
+                    Аналогичен slice, но можно задать n больше
+                    k и отрицательных значений не принимает
+                </p>
+                <pre>
+                'cocos creator'.substring(1, 5) // ocos
+                'cocos creator'.substring(5, 1) // ocos          
+            </pre>
+            </article>
+            <article>
+                <h3>str.substr(n, length)</h3>
+                <p>
+                    Возвращает кусочек str начиная с индекса n длинной length.
+                </p>
+                <pre>
+                'cocos creator'.substr(2, 7) // cos cre
+                'cocos creator'.substr(-3, 2) // to         
+            </pre>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
