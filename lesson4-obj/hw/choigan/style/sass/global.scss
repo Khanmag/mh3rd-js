@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'MyFont';
+}
+
+button {
+    background: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 600px;
+    width: 100vw;
+}
+
+.header__h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url(/lesson4-obj/hw/choigan/static/fonts/LibertinusSans-Regular.otf);
+}
+
+@import 'add';
+@import 'show';

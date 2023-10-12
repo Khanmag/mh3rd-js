@@ -1,0 +1,150 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'MyFont';
+}
+
+button {
+  background: none;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  max-width: 600px;
+  width: 100vw;
+}
+
+.header__h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url(/lesson4-obj/hw/choigan/static/fonts/LibertinusSans-Regular.otf);
+}
+.add__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(/lesson4-obj/hw/choigan/static/img/background.jpg);
+}
+
+.add__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 15px;
+  height: 40px;
+}
+
+#add__input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  height: 100%;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+#add__btn {
+  height: 100%;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+#show__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  min-height: 100px;
+  padding: 0 20px;
+  background-image: url(/lesson4-obj/hw/choigan/static/img/background.jpg);
+}
+
+.show__head {
+  padding: 15px 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 24px;
+}
+
+.createDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 30px;
+}
+
+.createP {
+  width: 80%;
+  background-color: #fff;
+  padding: 10px 10px;
+  height: 100%;
+  font-size: 18px;
+}
+
+.createDelBtn {
+  width: 20%;
+  height: 100%;
+  border: 1px solid #000;
+  padding: 5px;
+}
+
+/*# sourceMappingURL=global.css.map */

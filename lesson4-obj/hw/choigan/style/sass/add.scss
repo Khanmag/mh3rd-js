@@ -1,0 +1,33 @@
+.add__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    gap: 10px;
+    align-items: center;
+    background-image: url(/lesson4-obj/hw/choigan/static/img/background.jpg);
+}
+
+.add__items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    height: 40px;
+}
+
+#add__input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    height: 100%;
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+#add__btn {
+    height: 100%;
+    padding: 0 15px;
+    font-size: 16px;
+}

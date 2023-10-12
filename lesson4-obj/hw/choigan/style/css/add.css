@@ -1,0 +1,51 @@
+.add__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(/lesson4-obj/hw/choigan/static/img/background.jpg);
+}
+
+.add__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 15px;
+  height: 40px;
+}
+
+#add__input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  height: 100%;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+#add__btn {
+  height: 100%;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=add.css.map */
