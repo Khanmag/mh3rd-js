@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 5 JS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section class="zadanie__1">
+        <h2>Первое задание.</h2>
+        <div class="width__box">
+            <p>WIDTH</p>
+            <input type="range" id="width" min="0" max="255">
+            <p id="width__value">128</p>
+        </div>
+        <div class="height__box">
+            <p>HEIGHT</p>
+            <input type="range" id="height" min="0" max="255">
+            <p id="height__value">128</p>
+        </div>
+        <div id="box"></div>
+    </section>
+    <!-- ----------------------------------------------- -->
+
+    <h2>Второе задание.</h2>
+    <section class="zadanie__2">
+        <div class="ball__container">
+            <div id="ball">
+                <p id="ball__answer"></p>
+            </div>
+        </div>
+
+        <div class="question">
+            <input id="question__input" type="text" placeholder="Задайте вопрос">
+            <button id="question__btn">Получить ответ</button>
+        </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------------- -->
+
+    <h2>Третье задание.</h2>
+    <section id="word__section" class="word__block">
+        <input type="text" placeholder="Введите слово" id="word">
+        <input type="text" placeholder="Какую букву проверить?" id="letter">
+        <button id="check__btn">Проверить</button>
+        <p id="repeat__letter">Количество повторений символа: </p>
+    </section>
+
+    <!-- ---------------------------------------------------------------------- -->
+
+    <h2>Четвертое задание.</h2>
+    <section>
+        <p id="sentence">привет, я короткая строка</p>
+        <input id="sentence__input" type="text" value="привет, я короткая строка">
+        <button id="sentence__btn">Укоротить</button>
+    </section>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+#box {
+    border: 2px solid #000;
+    width: 128px;
+    height: 128px;
+}
+
+.width__box {
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+    gap: 15px;
+}
+
+.height__box {
+    display: flex;
+    justify-content: space-between;
+    width: max-content;
+    gap: 15px;
+}
+
+.width__box>p,
+.height__box>p {
+    min-width: 70px;
+    font-weight: 700;
+}
+
+.zadanie__1 {
+    margin-bottom: 105px;
+}
+
+/* ---------------------------------------------------------- */
+
+.zadanie__2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 105px;
+}
+
+.ball__container {
+    width: 255px;
+    height: 255px;
+    border: 2px solid #352e2e;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #352e2e;
+}
+
+#ball {
+    width: 155px;
+    height: 155px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.question {
+    height: 35px;
+}
+
+#question__input,
+#question__btn {
+    height: 100%;
+}
+
+/* --------------------------------------------------------- */
+
+.word__block {
+    display: flex;
+    gap: 20px;
+    height: 40px;
+    align-items: center;
+    margin-bottom: 105px;
+}
+
+.word__block input,
+.word__block button,
+.word__block span {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#repeat__letter {
+    font-size: 25px;
+}
