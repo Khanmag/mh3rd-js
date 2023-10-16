@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #circle {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 10px;
+        font-size: 20px;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <label for="width">Ширина рамки:</label>
+        <input type="number" id="width" />
+      </div>
+      <div>
+        <label for="height">Высота рамки:</label>
+        <input type="number" id="height" />
+      </div>
+      <div>
+        <label for="thickness">Толщина рамки:</label>
+        <input type="number" id="thickness" />
+      </div>
+      <div>
+        <label for="color">Цвет рамки:</label>
+        <input type="color" id="color" />
+      </div>
+      <button id="choose">Выбрать</button>
+
+      <div id="frame"></div>
+    </section>
+
+    <!--  -->
+
+    <section>
+      <div id="circle">
+        <input type="text" id="question" placeholder="Задайте вопрос..." />
+        <button id="ask">Спросить</button>
+      </div>
+    </section>
+
+    <!--  -->
+
+    <section>
+      <label for="word">Введите слово:</label>
+      <input type="text" id="word" />
+      <button onclick="checkLetter()">Проверить</button>
+    </section>
+
+    <!--  -->
+
+    <section>
+      <label for="string-input">Введите строку:</label>
+      <input type="text" id="string-input" />
+      <button onclick="shortenString()">Сократить</button>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
