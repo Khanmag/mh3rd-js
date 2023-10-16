@@ -39,7 +39,7 @@ function Horoscope () {
     }
 }
 
-// Horoscope()
+Horoscope()
 
 // Родовое число
 
@@ -50,7 +50,7 @@ function GenusNumber () {
     month = +month
     return alert(day+month)
 }
-// GenusNumber()
+GenusNumber()
 
 // Ложки кофе
 
