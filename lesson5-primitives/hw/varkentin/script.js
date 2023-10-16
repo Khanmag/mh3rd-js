@@ -85,7 +85,7 @@ entBtn.onclick = () => CheckDuplicateLetter(userString.value, userLetter.value)
 contain.append(userString, userLetter, entBtn, rezult)
 
 function CheckDuplicateLetter (string, letter) {
-   let message
+let message
    string = string.toLowerCase(string)
    letter= string.toLowerCase(letter)
    let find = string.indexOf(letter, 0)
@@ -98,10 +98,8 @@ function CheckDuplicateLetter (string, letter) {
             rezult.textContent = 'Повтор не обнаружен'
             return false
             } 
-   } else { return rezult.textContent = 'Такой буквы в строке нет'
+   } else return rezult.textContent = 'Такой буквы в строке нет'
 }
-}
-
 // ex4 Программа укорачивает строку до 20 символов
 
 const container = document.getElementById('ex4')
