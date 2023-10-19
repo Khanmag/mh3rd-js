@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Andrey">
+    <meta name="description" content="homework 09.10.2023">
+    <meta name="keywords" content="JavaScript, ToDo">
+    <!-- Favicon -->
+    <link rel="icon" href="https://icons-for-free.com/iconfiles/ico/32/smile-1324438819531858702.ico">
+    <title>Andrey's homework at 09.10.2023</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- 1 TASK -->
+    <section class="task">
+        <ol>
+            <li>
+                Создайте TODO-лист.
+                Это должен быть список дел, с полем для ввода и кнопкой “добавить”.
+                При нажатии на кнопку должен появляться новый html элемент с текстом из поля ввода,
+                а поле ввода должно очиститься.
+                При выполнении этих условий задание считается выполненным.
+                Далее дополнительные пункты:
+                <ul>
+                    <li>
+                        При клике на “дело” отображается, что оно выполнено, при повторном клике - возврат в начальное состояние
+                    </li>
+                    <li>
+                        У каждого “дела” есть кнопка для удаления. При клике на неё элемент исчезает
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+    <!-- 1 SOLUTION -->
+    <link rel="stylesheet" href="./css/style_todo.css">
+    <section class="solution">
+        <h2>ToDo List</h2>
+        <div class="root_enter">
+            <p>
+                Enter a New Case:
+            </p>
+            <input id="root_input">
+            <button id="root_button">Add This Case to List</button>
+        </div>
+        <h4>list of cases:</h4>
+        <div id="root_case">
+        </div>
+    </section>
+    <script src="./js/script_todo.js"></script>
+    <!-- 1 END -->
+</body>
+</html>
+

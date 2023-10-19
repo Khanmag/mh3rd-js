@@ -1,0 +1,48 @@
+.solution h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px;
+    text-decoration: underline;
+}
+.solution h4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px;
+}
+.solution div {
+    width: 600px;
+}
+.solution div.root_enter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.solution input {
+    width: 300px;
+    height: 20px;
+    font-size: 14px;
+}
+.solution button {
+    font-size: 12px;
+    padding: 5px;
+    min-width: 150px;    
+}
+
+
+
+.todo_case_done {
+    text-decoration: line-through;
+}
+.todo_case_not_done {
+    text-decoration: none;
+}
+.todo_case_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo_case_off {
+    display: none;
+}

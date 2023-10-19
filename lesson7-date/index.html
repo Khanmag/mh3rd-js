@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map, Set, Date, JSON</title>
+    <link rel="stylesheet" href="../global.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="back_button"></a>
+    </header>
+    <main>
+        <h1>Map, Set, Date, JSON</h1>
+        <section>
+            <h2>Map</h2>
+            <article>
+                <h3>
+                    Map – это коллекция пар ключ/значение, как и Object. 
+                    Но основное отличие в том, что  
+                    Map позволяет использовать ключи любого типа.
+                </h3>
+                <pre>
+    const map = new Map([
+        [{name: 'Anna'}, 1111],
+        [null, '2222'],
+        [Symbol('id'), false],
+        [['a', 'b', 'c'], 'abc'],
+    ])                            
+                </pre>
+            </article>
+            <article>
+                <h3>
+                    Methods
+                </h3>
+                <pre>
+    map.set(key, value)
+    map.get(key)
+    map.delete(key) 
+    map.clear()
+    map.size
+                </pre>
+            </article>
+            <article>
+                <h3>
+                    Iteration
+                </h3>
+                <pre>
+    map.keys()
+    map.values()
+    map.entries()
+                </pre>
+            </article>
+        </section>
+        <hr>
+        <section>
+            <h2>Set</h2>
+            <article>
+                <h3>
+                    Объект Set – это особый вид коллекции: 
+                    «множество» значений (без ключей), 
+                    где каждое значение может появляться только один раз.
+                </h3>
+                <pre>
+    const set = new Set([
+        {name: 'Anna'},
+        7,
+        '7',
+    ])
+                </pre>
+            </article>
+            <article>
+                <h3>
+                    Methods
+                </h3>
+                <pre>
+    set.add(value)
+    set.delete(value)
+    set.has(value)
+    set.clear()
+    set.size
+                </pre>
+            </article>
+        </section>
+        <hr>
+        <section>
+            <h2>Date</h2>
+            <article>
+                <h3>Definition</h3>
+                <pre>
+    const now = new Date() 
+    const start = new Date(0)
+    const another = new Date(13 * 24 * 3600 * 1000)
+    const birthday1 = new Date('1995-02-23')
+    const birthday2 = new Date(1995, 2, 23, 9, 37, 23)
+                </pre>
+            </article>
+            <article>
+                <h3>Methods</h3>
+                <pre>
+    date.getFullYear() //возвращает год ####
+    date.getMonth()
+    date.getDate() // возвращает день от 1 до 31
+    date.getHours()
+    date.getMinutes()
+    date.getSeconds()
+    date.getMilliseconds()
+    date.getDay() //возвращает день недели от 0 до 6
+    date.getTime() //возвращает количество мс с 1 янв 1970 г
+                </pre>
+            </article>
+        </section>
+        <hr>
+        <section>
+            <h2>JSON</h2>
+            <p>
+                JSON (JavaScript Object Notation) – это общий формат для 
+                представления значений и объектов. Его описание 
+                задокументировано в стандарте RFC 4627. Первоначально он 
+                был создан для JavaScript, но многие другие языки также 
+                имеют библиотеки, которые могут работать с ним. Таким образом, 
+                JSON легко использовать для обмена данными, когда 
+                клиент использует JavaScript, 
+                а сервер написан на Ruby/PHP/Java или любом другом языке.
+            </p>
+            <article>
+                <h2>JSON.stringify(value, replacer, space)</h2>
+                <pre>
+    value - значение для кодирования
+    replacer - массив свойств для кодирования или функция соответствия
+    space - отступы
+                </pre>
+            </article>
+            <article>
+                <h2>JSON.stringify(value, reviver)</h2>
+                <pre>
+    value - JSON для преобразования в объект
+    reviver - Необязательная функция, которая будет вызываться 
+    для каждой пары (ключ, значение) и может преобразовывать значение
+                </pre>
+            </article>
+        </section>
+    </main>
+    <script src=""></script>
+</body>
+</html>
