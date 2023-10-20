@@ -1,0 +1,17 @@
+.frameSelection_input {
+    /* self */
+    width: 450px;
+    height: 150px;
+    /* child */
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    justify-items: end;
+    align-items: center;
+}
+.frameSelection_input p {
+    justify-self: start;
+}
+.frameSelection_input button {
+    grid-column: span 3;
+    justify-self: center;
+}

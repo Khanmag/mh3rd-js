@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Andrey">
+    <meta name="description" content="homework 12.10.2023">
+    <meta name="keywords" content="JavaScript">
+    <!-- Favicon -->
+    <link rel="icon" href="https://icons-for-free.com/iconfiles/ico/32/smile-1324438819531858702.ico">
+    <title>Andrey's homework at 12.10.2023</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- 1 TASK -->
+       <section class="task">
+        <ul>
+            <li>
+                1) Создайте интерфейс, в котором пользователь выбирает рамки.
+                Он может ввести ширину, высоту, толщину и цвет рамки.
+                Нажав на кнопку “выбрать” рамка нужных размеров появляется на странице
+            </li>
+        </ul>
+    </section>
+    <!-- 1 SOLUTION -->
+    <link rel="stylesheet" href="./css/frameSelection.css">
+    <section class="solution">
+        <h2>Frame Selection</h2>
+        <div id="root_frameSelection_input" class="frameSelection_input">
+            <p>Width Selection of Frame</p>
+            <input id="frameSelect_input_width" type="number" value="100" placeholder="number" min="10" max="1000">
+            <input id="frameSelect_select_width" type="range" value="100" min="10" max="1000">
+            <p>Height Selection of Frame</p>
+            <input id="frameSelect_input_heigth" type="number" value="100" placeholder="number" min="10" max="1000">
+            <input id="frameSelect_select_heigth" type="range" value="100" min="10" max="1000">
+            <p>Thickness Selection of Frame</p>
+            <input id="frameSelect_input_thickness" type="number" value="5" placeholder="number" min="0" max="100">
+            <input id="frameSelect_select_thickness" type="range" value="5" min="1" max="100">
+            <p>Color Selection of Frame</p>
+            <input id="frameSelect_select_color" type="color" value="#00aa00">
+            <input id="frameSelect_input_color" type="text" value="#00aa00" placeholder="HEX #RRGGBB">
+            <button id="frameSelect_button">Show Result</button>
+        </div>
+        <h4>Action</h4>
+        <div id="root_frameSelection_output">
+            <!-- <input type="text" style="width: 300px; height: 300px; border: 5px solid green; display: on" disabled> -->
+        </div>
+    </section>
+    <!-- 1 END -->
+
+    <!-- 2 TASK -->
+    <section class="task">
+        <ul>
+            <li>
+                2) Создайте шар из фильма “Трасса 60”.
+                Он случайным образом отвечает на вопросы фразами по типу “Да”, “Нет”, “Возможно”, “Вполне вероятно” и тд.
+                Пользователь вводит вопрос, нажимает на кнопку и на странице появляется ответ
+            </li>
+        </ul>
+    </section>
+    <!-- 2 SOLUTION -->
+    <link rel="stylesheet" href="./css/magicBall.css">
+    <section class="solution">
+        <h2>Magic 8 Ball</h2>
+        <div id="root_magicBall" class="magicBall">
+            <div class="magicBall_сircle_outer">
+                <div id="root_magicBall_circle" class="magicBall_сircle_inner_white">
+                    <div id="root_magicBall_triangle" class="magicBall_triangle_off">
+                        <div class="magicBall_text">
+                            <p id="root_magicBall_message" class="magicBall_message_big">
+                                8
+                            </p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <h4>Enter a Question and Think about It</h4>
+            <input id="root_magicBall_question" placeholder="...or Think about the Question">
+            <button id="root_magicBall_button">Show Result</button>
+            <input id="root_magicBall_answer" disabled>
+        </div>
+    </section>
+    <!-- 2 END -->
+
+    <!-- 3 TASK -->
+    <section class="task">
+        <ul>
+            <li>
+                3) Напишите функцию, которая принимает слово и букву.
+                Функция проверяет, повторяется ли эта буква в слове, если да - возвращает true, нет - false,
+                если буквы в слове нет - возвращается сообщение об этом
+            </li>
+        </ul>
+    </section>
+    <!-- 3 SOLUTION -->
+    <link rel="stylesheet" href="./css/findLetter.css">
+    <section class="solution">
+        <h2>Find Letter in the Word(s)</h2>
+        <div id="root_findLetter_input" class="findLetter_input">
+            <p>Enter the Word(s)</p>
+            <input id="findLeter_input_word" placeholder="enter word(s)">
+            <p>Enter the Letter</p>
+            <input id="findLeter_input_letter" placeholder="enter letter (first letter)">
+            <button id="findLeter_button">Show Result</button>
+        </div>
+        <h4>Acrion</h4>
+        <div id="root_findLetter_output">
+        </div>
+    </section>
+    <!-- 3 END -->
+
+    <!-- 4 TASK -->
+    <section class="task">
+        <ul>
+            <li>
+                4) Напишите функцию, которая принимает в себя строку и возвращает укороченный её вариант,
+                если она длиннее 20-ти символов (“привет, я короткая стро…”)
+            </li>
+        </ul>
+    </section>
+    <!-- 4 SOLUTION -->
+    <link rel="stylesheet" href="./css/shortenString.css">
+    <section class="solution">
+        <h2>Shorten String</h2>
+        <div id="root_shortenString_input" class="shortenString_input">
+            <p>Enter the String</p>
+            <input id="shortenString_input_string" placeholder="enter string">
+            <button id="shortenString_button">Show Result</button>
+        </div>
+        <h4>Acrion</h4>
+        <div id="root_shortenString_output">
+        </div>
+    </section>
+    <!-- 4 END -->
+
+    <script src="./script.js"></script>
+</body>
+</html>
+
