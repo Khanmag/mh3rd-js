@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --section__width__max: 800px;
+    --section__width__min: 600px;
+    --section__border__size: 1px;
+    --section__margin__size: 0.5rem;
+    --section__padding__size: 2rem;
+    /* color scheme */
+    --text__main__color: black;
+    --background__body__color: white;
+    --section__border__color: black;
+    --section__background__color-task: ghostwhite;
+    --section__background__color-solution: floralwhite;
+    --input__background__color: ghostwhite;
+}
+body {
+    /* font */
+    font-family: Arial;
+    color: var(--text__main__color);
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 14px;
+    /* self */
+    background-color: var(--background__body__color);
+    /* kids */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px;
+    text-decoration: underline;
+}
+h4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px;
+}
+section {
+    /* self */
+    max-width: var(--section__width__max);
+    min-width: var(--section__width__min);
+    width: 100vw;
+    min-height: 50px;
+    margin: var(--section__margin__size) 0;
+    padding: var(--section__padding__size);
+    /* kids */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+section.task {
+    /* self */
+    background-color: var(--section__background__color-task);
+    border: var(--section__border__size) solid var(--section__border__color);
+}
+section.solution {
+    /* self */
+    display: block;
+    background-color: var(--section__background__color-solution);
+    border: var(--section__border__size) dashed var(--section__border__color);
+    white-space: pre-line;
+    padding: 0 75px;
+}
+input {
+    width: 100px;
+    height: 20px;
+    font-size: 14px;
+    background-color: var(--input__background__color);
+}
+button {
+    font-size: 12px;
+    padding: 5px;
+    width: 150px;    
+}
+code {
+    display: block;
+    color: blue;
+    margin: 15px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    white-space: pre-line;
+}
