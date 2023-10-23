@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion, Closures, globalThis, Timers</title>
+    <link rel="stylesheet" href="../global.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="back_button"></a>
+    </header>
+    <main>
+        <h1>Recursion, Closures, globalThis, Timers</h1>
+        <section>
+            <h2>Recursion</h2>
+            <article>
+                <h3>
+                    Рекурсия – это термин в программировании, означающий вызов функцией самой себя. 
+                    Рекурсивные функции могут быть использованы для элегантного решения определённых задач.
+                </h3>
+                <pre>
+    const mathPow = (a, n) => {
+        return (n === 1) ? a : a * mathPow(a, n - 1)
+    }                                               
+                </pre>
+                <p>
+                    Контекст выполнения – специальная внутренняя структура данных, 
+                    которая содержит информацию о вызове функции. Она включает 
+                    в себя конкретное место в коде, на котором находится интерпретатор,
+                    локальные переменные функции, значение this 
+                    (мы не используем его в данном примере) и прочую служебную информацию.
+                </p>
+            </article>
+        </section>
+        <hr>
+        <section>
+            <h2>Closures</h2>
+            <article>
+                <h3>
+                    Замыкание – это функция, которая запоминает свои внешние переменные 
+                    и может получить к ним доступ. В некоторых языках это невозможно, 
+                    или функция должна быть написана специальным образом, чтобы 
+                    получилось замыкание. Но в JavaScript все функции изначально являются 
+                    замыканиями (есть только одно исключение "new Function").
+                </h3>
+                <pre>
+    const createCounter = () => {
+        let counter = 0
+        return () => {
+            return `call count: ${counter++}`
+        }
+    }
+    const callCounter = createCounter()
+    console.log(callCounter()); // call count: 0
+    console.log(callCounter()); // call count: 1
+    console.log(callCounter()); // call count: 2
+    console.log(callCounter()); // call count: 3         
+                </pre>
+                <p>
+                    В JavaScript у каждой выполняемой функции,
+                    блока кода {...} и скрипта есть связанный 
+                    с ними внутренний (скрытый) объект,
+                    называемый лексическим окружением LexicalEnvironment.
+                </p>
+            </article>
+        </section>
+        <hr>
+        <section>
+            <h2>Global Object</h2>
+            <p>
+                Глобальный объект хранит переменные, которые должны быть доступны в любом месте программы.
+            </p>
+            <pre>
+    window      - для браузера
+    global      - для Node.JS
+    globalThis  - стандарт для любого окружения
+            </pre>
+            <p>
+                Это включает в себя как встроенные объекты, например, 
+                Array, так и характерные для окружения 
+                свойства, например, window.innerHeight – высота окна браузера
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h2>Timers</h2>
+            <article>
+                <h3>setTimeout</h3>
+                <p>позволяет вызвать функцию один раз через определённый интервал времени.</p>
+                <pre>
+    const timeout = setTimeout(func, delay, ...args)
+    clearTimeout(timeout)
+                </pre>
+            </article>
+            <article>
+                <h3>setInterval</h3>
+                <p>позволяет вызывать функцию регулярно, повторяя вызов через определённый интервал времени.</p>
+                <pre>
+    const interval = setInterval(func, delay, ...args)
+    clearInterval(interval)
+                </pre>
+            </article>
+        </section>
+        </main>
+    <script src="./script.js"></script>
+</body>
+</html>

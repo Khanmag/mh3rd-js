@@ -43,18 +43,27 @@ function getZodiacSign(dateString) {
   }
 }
 
+
+
 function getUsersWithZodiacSign(users) {
-  return users.map((user) => {
+  // 
+  const map = new Map()
+  // 
+  users.map((user) => {
     const userInfo = user[0];
     const name = userInfo.name;
     const bd = userInfo.bd;
     const zodiacSign = getZodiacSign(bd);
-
-    return {
-      name: name,
-      zodiacSign: zodiacSign,
-    };
+    // 
+    map.set(user[0].name, zodiacSign)
+    // 
+    // return {
+    //   name: name,
+    //   zodiacSign: zodiacSign,
+    // };
+    // return map
   });
+  return map
 }
 
 const usersWithZodiacSign = getUsersWithZodiacSign(users);
@@ -101,7 +110,7 @@ function sortKeysByAge(users) {
       const bdA = new Date(a[0].bd);
       const bdB = new Date(b[0].bd);
       return bdA - bdB;
-    }).map(user => user[1]);
+    }).map(user => user[0].name);
   
     return sortedKeys;
   }
