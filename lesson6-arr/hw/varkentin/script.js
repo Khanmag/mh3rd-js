@@ -54,11 +54,12 @@ function Filter (arr, ost){
 }
 console.log(price)
 console.log(product)
-const obj = {};
-let index = 0
-for (const element of price) {
-    obj[element] = product[index];
-    index++
-  }
-console.log(obj);
 
+const staffObj = staff.reduce((acc, item , index, staff ) => {
+    if (index % 2 == 0){
+       acc[staff[index]] = staff[index+1];
+    }
+    return acc;
+  }, {});
+ 
+console.log(staffObj)
