@@ -174,3 +174,17 @@ arrToString()
 const data1 = new Date('2023-08-10')
 const dataNow = new Date()
 console.log((dataNow - data1) / (24 * 3600 * 1000));
+
+const users = new Map([
+    [{id: 1, name: 'Anna', bd: '1991-01-01'}, 'user'],
+    [{id: 2, name: 'Bill', bd: '1990-02-08'}, 'user'],
+    [{id: 3, name: 'Clint', bd: '1988-10-19'}, 'user'],
+    [{id: 4, name: 'Den', bd: '1993-08-08'}, 'admin'],
+    [{id: 5, name: 'Eva', bd: '1990-03-30'}, 'admin'],
+    [{id: 6, name: 'Fill', bd: '1999-03-30'}, 'user'],
+    [{id: 7, name: 'Germiona', bd: '1995-02-23'}, 'admin'],
+    [{id: 8, name: 'Henry', bd: '1992-03-08'}, 'user'],
+])
+
+console.log([...users.keys()]);
+console.log(users);
