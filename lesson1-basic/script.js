@@ -108,8 +108,8 @@ console.log('**', 4**2)
 // const userPrompt = +prompt('How old are you?', '18')
 // console.log(userPrompt, typeof userPrompt)
 
-const userAgree = confirm('Are you old?')
-console.log(userAgree, typeof userAgree)
+// const userAgree = confirm('Are you old?')
+// console.log(userAgree, typeof userAgree)
 
 
 

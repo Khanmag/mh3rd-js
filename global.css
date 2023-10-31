@@ -17,7 +17,7 @@ body > * {
     overflow: hidden;
 }
 header, footer {
-    min-height: 50px;
+    height: 50px;
 }
 main {
     min-height: calc(100vh - 100px);
@@ -36,4 +36,41 @@ main {
 .back_button:hover {
     transition-duration: 0.2s;
     background-color: rgba(0, 0, 0, 0.711);
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 150%;
+    gap: 10px;
+}
+a {
+    text-decoration: none;
+    color: darkslategrey
+}
+a:hover {
+    text-shadow: 1px 0;
+}
+a:active {
+    color: lightcoral
+}
+a:visited {
+    color: lightslategray
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+h1 {
+    text-align: center;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        height: 0;
+    }
+    footer {
+        height: 100px;
+        flex-flow: column wrap;
+    }
 }
