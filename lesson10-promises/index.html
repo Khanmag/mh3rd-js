@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback; Promises; micro- and macro- tasks; async await</title>
+    <link rel="stylesheet" href="../global.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="back_button"></a>
+    </header>
+    <main>
+        <h1>callback; Promises; micro- and macro- tasks; async, await</h1>
+        <section>
+            <h2>callback</h2>
+            <p>
+                Callback - это функция, которая должна 
+                выполнится после того, как выполнится другая функция 
+            </p>
+            <pre>
+    function loadScript(src, callback)   {
+        let script = document.createElement('script')
+        script.src = src
+        script.onload = () => callback(null, script)
+        script.onerror = () => callback(new Error('the script does not run'))
+        document.head.append(script)
+    }
+
+    loadScript('./script.js', (error, callback) => {
+        if (error) {
+            console.error('we have error, please try later')
+        } else {
+            getAlert() // ф-я лежащая в файле script.js
+        }
+    })                
+            </pre>
+        </section>
+        <hr>
+        <section>
+            <h2>Promises</h2>
+            <p>
+                Promise (промисы, обещания) – это специальный объект и набор методов 
+                в JavaScript для удобного написания асинхронного кода.
+            </p>
+            <p>
+                В отличие от обратных вызовов промисы позволяют решать 
+                асинхронные задачи значительно проще без создания 
+                большого количества вложенностей одних функций в другие
+            </p>
+            <pre>
+    const promise = new Promise( (resolve, reject) => {
+        setTimeout( () => {
+            if (Math.random() > 0.5) resolve('happy')
+            else reject(new Error('sad'))
+        }, 1000)
+    })         
+            </pre>
+            <h2>Methods</h2>
+            <p>
+                .then(func(result), func(error)) принимает два аргумента, первый 
+                выполняется при вызове resolve, второй при вызове reject
+            </p>
+            <pre>
+    promise.then(
+        result => console.log(result),
+        error => console.log(error.message)
+    )                
+            </pre>
+            <p>
+                .catch(func(error)) обрабатывает только ошибку, 
+                по сути аналогичен .then(null, func(error))
+            </p>
+            <pre>
+    promise.сatch(error => console.log(error.message))               
+            </pre>
+            <p>
+                .finally(func()) служит для выполнения действий в любом 
+                случае, передаваемая в этот метод функция не принимает 
+                никаких параметров. Так же передаёт результат или 
+                ошибку дальше, позволяя вызывать себя до then или catch
+            </p>
+            <pre>
+    promise.finally(() => {
+        //anything…
+    })                    
+            </pre>
+        </section>
+        <hr>
+        <section>
+            <h2>Micro- Macro- tasks</h2>
+            <pre>
+    setTimeout(() => alert("timeout1"));
+    Promise.resolve()
+    .then(() => alert("promise1"));
+    setTimeout(() => alert("timeout2"));
+    Promise.reject()
+    .then(null, () => alert("promise2"));
+    alert("code");
+    
+    # code
+    # promise1
+    # promise2
+    # timeout1
+    # timeout2                
+            </pre>
+            <p>
+                Сразу после каждой макрозадачи движок исполняет все 
+                задачи из очереди микрозадач перед тем, как выполнить следующую макрозадачу или 
+                отобразить изменения на странице, или сделать что-то ещё.
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h2>async, await</h2>
+            <pre>
+                async function response() {
+                    const data = await fetch(url).then(res => res.json())
+                    console.log(data)
+                }                
+            </pre>
+            <p>
+                async имеет одни простой смысл: эта функция 
+                всегда возвращает промис. Значения других типов 
+                оборачиваются в завершившийся успешно промис автоматически.
+            </p>
+            <p>
+                await заставит интерпретатор JavaScript ждать до тех 
+                пор, пока промис справа от await не выполнится. После чего оно вернёт 
+                его результат, и выполнение кода продолжится.
+            </p>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
