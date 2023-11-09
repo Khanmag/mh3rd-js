@@ -1,0 +1,20 @@
+.question {
+    width: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 10px;
+}
+.question span {
+    color: red;
+    font-weight: 600;
+}
+.question input {
+    width: 200px;
+}
+.question button {
+    width: 100px;
+    height: 30px;
+}
