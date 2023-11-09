@@ -10,17 +10,10 @@ function taskRun() {
 };
 function task() {
     const staff = ['dress', '9000p', 'shirt', '3000p', 'shoe', '5000p', 'hat', '1500p', ];
-    const product = staff.filter(item => {
-        return !parseFloat(item);
-    });
-    const price = staff.filter(item => {
-        return parseFloat(item);
-    });
+    const product = staff.filter(item => !parseFloat(item));
+    const price = staff.filter(item => parseFloat(item));
     const goods = {};
-    staff.reduce((acc, item) => {
-        if (parseFloat(item)) return goods[acc] = item;
-        return acc = item;
-    });
+    staff.reduce((acc, item) => parseFloat(item) ? goods[acc] = item : acc = item);
     write(product);
     write(price);
     write('See the Task with *** in the Console\nЗадание со *** смотри в консоле');

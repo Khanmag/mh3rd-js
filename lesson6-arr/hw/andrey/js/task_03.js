@@ -12,7 +12,7 @@ function task() {
     const arr1 = [3, 5, 7];
     const arr2 = [19, 23];
     const arr3 = [11, 13, 17];
-    const result = [].concat(arr1, arr2, arr3).sort((a, b) => a - b).reverse();
+    const result = [].concat(arr1, arr2, arr3).sort((a, b) => b - a);
     write(result);
 };
 taskRun();
