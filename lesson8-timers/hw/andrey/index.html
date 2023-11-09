@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Andrey">
+    <meta name="description" content="homework 23.10.2023">
+    <meta name="keywords" content="JavaScript, Recurcion, Closures, Timers">
+    <!-- Favicon -->
+    <link rel="icon" href="https://icons-for-free.com/iconfiles/ico/32/smile-1324438819531858702.ico">
+    <title>Andrey's homework at 23.10.2023</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- 1 TASK -->
+    <section class="task">
+        <ul>
+            <li>
+                1) Создайте функцию-оптимизатор для результата выполнения ф-ии createColumn, созданной на занятии.
+                Функция-оптимизатор должна принимать в себя колонки и выводить римское число в обычном виде
+                <code>
+                ```js
+                const doNiceRomeNumber = (number) => {...}
+                doNiceRomeNumber('IIIIIIII') ==>> 'VIII'
+                doNiceRomeNumber('IIIIIIIII') ==>> 'IX'
+                doNiceRomeNumber('IIIIIIIIIII') ==>> 'XI'
+                ```
+                </code>
+            </li>
+        </ul>
+    </section>
+<!-- 1 SOLUTION -->
+    <link rel="stylesheet" href="./css/convertArabic2Roman.css">
+    <section class="solution">
+        <h2>Arabic to Roman numerals converter</h2>
+        <div id="root_convertArabic2Roman" class="convertArabic2Roman">
+            <p class="input">Enter the number in Arabic numerals:</p>
+            <input id="root_convertArabic2Roman_input" placeholder="from 1 to 100">
+            <button id="root_convertArabic2Roman_button">Show Result</button>
+            <p>Result:</p>
+            <input id="root_convertArabic2Roman_output" class="output" disabled>
+        </div>
+    </section>
+    <script src="./js/convertArabic2Roman.js"></script>
+<!-- 1 END -->
+
+<!-- 2 TASK -->
+    <section class="task">
+        <ul>
+            <li>
+                2) Создайте функцию, которая при каждом вызове возвращает массив,
+                в котором записано время каждого её вызова.
+                Проверьте её с помощью setTimeout или setInterval
+            </li>
+        </ul>
+    </section>
+<!-- 2 SOLUTION -->
+    <link rel="stylesheet" href="./css/randomTimer.css">
+    <section class="solution">
+        <h2>Random call generator</h2>
+        <div class="randomTimer">
+            <textarea id="root_randomTimer_output" disabled></textarea>
+            <button id="root_randomTimer_button">Stop</button>
+        </div>
+    </section>
+    <script src="./js/randomTimer.js"></script>
+<!-- 2 END -->
+
+    <!-- <script src="./script.js"></script> -->
+</body>
+</html>
+
