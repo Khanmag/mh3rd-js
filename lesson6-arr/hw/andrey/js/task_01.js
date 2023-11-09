@@ -12,7 +12,7 @@ function task() {
     const arr = ['empty', 121, 'zero', 144, null, 189, 'nothing'];
     let result = null;
     for (item of arr) {
-        (+item) ? result += item : {};
+        +item ? result += item : {};
     };
     write(result);
 };
