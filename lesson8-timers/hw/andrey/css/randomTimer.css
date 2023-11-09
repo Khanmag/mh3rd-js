@@ -1,0 +1,17 @@
+.randomTimer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    row-gap: 10px;
+}
+.randomTimer textarea {
+    width: 450px;
+    height: 350px;
+    resize: none;
+}
+.randomTimer button {
+    width: 100px;
+    height: 30px;
+    margin-bottom: 20px;
+}

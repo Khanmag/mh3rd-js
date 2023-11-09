@@ -1,0 +1,26 @@
+.convertArabic2Roman {
+    display: grid;
+    grid-template-columns: 100px 150px 100px 100px;
+    grid-template-rows: 60px 60px;
+    column-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+.convertArabic2Roman p {
+    width: 250px;
+    justify-self: start;
+}
+.convertArabic2Roman p.input {
+    grid-column: span 2;
+}
+.convertArabic2Roman input {
+    width: 100px;
+}
+.convertArabic2Roman button {
+    width: 100px;
+    height: 30px;
+}
+.convertArabic2Roman .output {
+    width: 350px;
+    grid-column: span 3;
+}
